@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     HomeComponent,
     CalendarComponent,
-    ProfileComponent
+    ProfileComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,8 +3,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export class Article {
+  "articleId" : number;
   "title" : string;
-  "subtilte": string;
+  "subtitle": string;
   "body": string;
 }
 
@@ -18,6 +19,10 @@ export class ArticleService {
 
   getArticlesList(): Observable <any> {
     return this.http.get(this.baseUrl + 'articles');
+  }
+
+  getArticle(id:number): Observable <any>{
+    return this.http.get(this.baseUrl + 'article/' + id);
   }
 
 }
