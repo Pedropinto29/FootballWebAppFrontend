@@ -1,1 +1,35 @@
-<p>calendar works!</p>
+<h1> Past Games</h1>
+<div *ngFor="let game of games">
+    <mat-card class="card" *ngIf="game.homeScore and game.awayScore">
+        <mat-card-title class="header">
+            {{game.date}}
+        </mat-card-title>
+        <mat-card-content>
+            <b>{{game.homeTeam}}</b> <span class="score">{{game.homeScore}}</span>
+            <mat-card-subtitle class="competition">
+                {{game.competition}}
+            </mat-card-subtitle>
+            <b>{{game.awayTeam}}</b> <span class="score">{{game.awayScore}}</span>
+        </mat-card-content>
+        
+    </mat-card>
+</div>
+
+<h1> Next Games</h1>
+<div *ngFor="let game of games">
+    <mat-card class="card" *ngIf="!game.homeScore and !game.awayScore">
+        <mat-card-title class="header">
+            {{game.date}}
+        </mat-card-title>
+        <mat-card-content>
+            <b>{{game.homeTeam}} </b>
+            <mat-card-subtitle>
+                <span class="time"> {{game.time}}</span>
+                <span class="competition2">{{game.competition}}</span>
+            </mat-card-subtitle>
+            <!-- <p class="competition">{{game.competition}} </p> -->
+            <b>{{game.awayTeam}} </b>
+        </mat-card-content>
+        
+    </mat-card>
+</div>
