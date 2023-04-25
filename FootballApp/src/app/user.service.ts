@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, ɵɵresolveBody } from '@angular/core';
 import { Observable } from 'rxjs';
 
 export class User {
@@ -11,6 +11,11 @@ export class User {
   'email': string;
   'annualPlace' : string;
   'admin': boolean;
+}
+
+export class UserLogin{
+  'username': string;
+  'password': string;
 }
 
 @Injectable({
@@ -27,5 +32,14 @@ export class UserService {
       'Authorization' : `Bearer ${localStorage.getItem('token')}`
     })
     return this.http.get(this.baseUrl + 'profile', {"headers": headers})
+  }
+
+  login(user : User) : Observable <any> {
+    return this.http.post(this.baseUrl + 'login', user)
+  }
+
+  userExists(user : UserLogin) : Observable <any> {
+    console.log(user)
+    return this.http.post(this.baseUrl + "userExists", user)
   }
 }

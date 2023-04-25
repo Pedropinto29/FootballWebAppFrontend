@@ -16,6 +16,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticleComponent } from './article/article.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ArticleComponent } from './article/article.component';
     HomeComponent,
     CalendarComponent,
     ProfileComponent,
-    ArticleComponent
+    ArticleComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
