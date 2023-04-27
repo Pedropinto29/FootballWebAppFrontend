@@ -1,0 +1,54 @@
+/* Style the form container */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  width: 300px;
+}
+
+/* Style the input container */
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Style the label */
+label {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Style the input */
+input {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Style the submit button */
+.btn {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Change the background color of the submit button on hover */
+.btn:hover {
+  background-color: #555;
+}

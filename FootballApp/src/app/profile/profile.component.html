@@ -1,1 +1,27 @@
-<p>profile works!</p>
+<h1 class="title">Welcome to your personal page {{user.name}}</h1>
+<div class="data">
+    <br>
+    <div>
+        <b class="label"> Name: </b>
+        <span class="getted"> {{user.name}}</span>
+    </div>
+    <br>
+    <div>
+        <b class="label"> Surname: </b>
+        <span class="getted"> {{user.surname}}</span>
+    </div>
+    <br>
+    <div>
+        <b class="label"> Email: </b>
+        <span class="getted"> {{user.email}}</span>
+    </div>
+    <br>
+    <div *ngIf="user.annualPlace">
+        <b class="label"> Email: </b>
+        <span class="getted"> {{user.email}}</span>
+    </div>
+    <div #elseBlock>
+        <button> Get annual place</button>
+    </div>
+</div>
+

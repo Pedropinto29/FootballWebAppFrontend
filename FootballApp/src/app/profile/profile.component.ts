@@ -9,8 +9,8 @@ import { User, UserService } from '../user.service';
 export class ProfileComponent {
   user = new User()
 
+  
   constructor (private userService : UserService){}
-
   ngOnInit() {
     this.userService.getUserProfile().subscribe(
       data => {
