@@ -1,0 +1,16 @@
+<h1> Edit article</h1>
+<form>
+    <div class="title">
+        <label>Title: </label>
+        <textarea required type="text" name="title" #title class="tit">{{article.title}}</textarea>
+    </div>
+    <div class="subtitle">
+        <label>Subtitle: </label>
+        <textarea required type="text" name="subtitle" #subtitle class="sub">{{article.subtitle}}</textarea>
+    </div>
+    <div class="body">
+        <label>Body: </label>
+        <textarea required type="text" name="body" #body class="bod">{{article.body}}</textarea>
+    </div>  
+    <button type="button" (click)="edit(title.value, subtitle.value, body.value)"> Edit article</button>
+</form>

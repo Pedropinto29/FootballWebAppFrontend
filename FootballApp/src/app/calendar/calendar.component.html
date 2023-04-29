@@ -16,7 +16,7 @@
 </div>
 <h1> Next Games</h1>
 <div *ngFor="let game of games">
-    <mat-card class="card" #elseBlock>
+    <mat-card class="card" *ngIf="!game.homeScore">
         <mat-card-title class="header">
             {{game.date}}
         </mat-card-title>

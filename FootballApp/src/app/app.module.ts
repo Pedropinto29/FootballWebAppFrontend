@@ -17,6 +17,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticleComponent } from './article/article.component';
 import { LoginComponent } from './login/login.component';
+import { NewArticleComponent } from './new-article/new-article.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { LoginComponent } from './login/login.component';
     CalendarComponent,
     ProfileComponent,
     ArticleComponent,
-    LoginComponent
+    LoginComponent,
+    NewArticleComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

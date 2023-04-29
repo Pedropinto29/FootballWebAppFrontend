@@ -1,0 +1,17 @@
+<h1> Write a new article</h1>
+<form>
+    <div class="title">
+        <label>Title: </label>
+        <textarea required type="text" name="title" #title class="tit"></textarea>
+    </div>
+    <div class="subtitle">
+        <label>Subtitle: </label>
+        <textarea required type="text" name="subtitle" #subtitle class="sub"></textarea>
+    </div>
+    <div class="body">
+        <label>Body: </label>
+        <textarea required type="text" name="body" #body class="bod"></textarea>
+    </div>  
+
+    <button type="button" (click)="writeArticle(title.value, subtitle.value, body.value)"> Create new article</button>
+</form>

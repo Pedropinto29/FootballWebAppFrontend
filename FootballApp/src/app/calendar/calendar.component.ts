@@ -7,7 +7,6 @@ import { GamesService, Game } from '../games.service';
 })
 export class CalendarComponent {
   games: Game[] = []
-
   constructor (private gamesService : GamesService) {}
 
   ngOnInit(){

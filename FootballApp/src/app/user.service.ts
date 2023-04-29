@@ -26,14 +26,6 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  // getUserProfile(userId : number) : Observable <any> {
-  //   const headers = new HttpHeaders({
-  //     'Content-Type' : 'application/json',
-  //     'Authorization' : `Bearer ${localStorage.getItem('token')}`
-  //   })
-  //   return this.http.get(this.baseUrl + 'profile/' + userId, {headers : headers})
-  // }
-
   getUserProfile() : Observable <any> {
     const headers = new HttpHeaders({
       'Content-Type' : 'application/json',

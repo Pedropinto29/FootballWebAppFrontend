@@ -7,9 +7,7 @@ import { User, UserService } from '../user.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  user = new User()
-
-  
+  user = new User()  
   constructor (private userService : UserService){}
   ngOnInit() {
     this.userService.getUserProfile().subscribe(

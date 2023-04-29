@@ -1,5 +1,10 @@
 .text {
     text-align: center;
+    padding-left: 5%;
+}
+.text2 {
+    text-align: center;
+    padding-left: 7%;
 }
 
 h1 {
@@ -16,4 +21,30 @@ h1 {
 }
 div {
     padding: 10px;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #555;
+}
+
+.butttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cardButton {
+    float: right;
+    margin-right: 1%;
 }
