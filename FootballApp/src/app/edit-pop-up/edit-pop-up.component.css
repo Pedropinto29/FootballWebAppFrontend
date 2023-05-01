@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+    margin: 1%;
+}
+
+label{
+    font-weight: bold;
+    margin-right: 15%;
+    width: 50px;
+    margin-left: 5%;
+}
+
+input{
+    width: 50px;
+}
+
+div {
+    width: 250px;
+    margin-bottom: 1%;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1%;
+}
+button:hover {
+    background-color: #555;
+}
+
+form {
+    width: 60%;
+    text-align: center;
+}
+  

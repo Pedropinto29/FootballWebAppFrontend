@@ -1,0 +1,17 @@
+<div>
+    <h1> Edit score</h1>
+    <form>
+        <div>
+            <label class="labe" > homeScore</label>
+            <input type="number" #homeScore value="{{game.homeScore}}">
+        </div>
+        <div>
+            <label class="label" > awayScore </label>
+            <input type="number" #awayScore value="{{game.awayScore}}">
+        </div>
+
+        <div class="butttonDiv">
+            <button (click)="editGame(homeScore.value, awayScore.value)"> Edit</button>
+        </div>
+    </form>
+</div>

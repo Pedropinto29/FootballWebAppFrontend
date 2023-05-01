@@ -10,13 +10,15 @@
                 {{game.competition}}
             </mat-card-subtitle>
             <b>{{game.awayTeam}}</b> <span class="score">{{game.awayScore}}</span>
-        </mat-card-content>
-        
+            <button *ngIf="userType" class="cardButton" (click)="edit(game)">Edit game</button>
+        </mat-card-content>  
     </mat-card>
 </div>
+
 <h1> Next Games</h1>
 <div *ngFor="let game of games">
     <mat-card class="card" *ngIf="!game.homeScore">
+        
         <mat-card-title class="header">
             {{game.date}}
         </mat-card-title>
@@ -28,7 +30,10 @@
             </mat-card-subtitle>
             <!-- <p class="competition">{{game.competition}} </p> -->
             <b>{{game.awayTeam}} </b>
+            <button *ngIf="userType" class="cardButton" (click)="edit(game)">Edit game</button>
         </mat-card-content>
         
     </mat-card>
 </div>
+
+

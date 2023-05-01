@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -6,8 +6,8 @@ export class Game {
   "gameId" : number;
   "homeTeam" : string;
   "awayTeam" : string;
-  "homeScore" : string;
-  "awayScore" : string;
+  "homeScore" : number;
+  "awayScore" : number;
   "competition" : string;
   "date" : string;
   "time" : string;
@@ -21,6 +21,27 @@ export class GamesService {
   constructor( private http: HttpClient) { }
 
   getGamesList(): Observable <any> {
-    return this.http.get(this.baseUrl + 'games')
+    const headers = new HttpHeaders({
+      'Content-Type' : 'application/json',
+      'Authorization' : `Bearer ${localStorage.getItem('token')}`
+    })
+    return this.http.get(this.baseUrl + 'games', {headers: headers})
   }
+
+  editGame(id: number, game: Game) : Observable <any> {
+    const headers = new HttpHeaders({
+      'Content-Type' : 'application/json',
+      'Authorization' : `Bearer ${localStorage.getItem('token')}`
+    })
+    return this.http.put(this.baseUrl + 'game/' + id, game, {headers:headers})
+  }
+
+  getGame(id: number) : Observable <any> {
+    const headers = new HttpHeaders({
+      'Content-Type' : 'application/json',
+      'Authorization' : `Bearer ${localStorage.getItem('token')}`
+    })
+    return this.http.get(this.baseUrl + 'game/' + id, {headers: headers})
+  }
+
 }

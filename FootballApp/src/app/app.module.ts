@@ -7,6 +7,7 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog'
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,6 +20,7 @@ import { ArticleComponent } from './article/article.component';
 import { LoginComponent } from './login/login.component';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { EditComponent } from './edit/edit.component';
+import { EditPopUpComponent } from './edit-pop-up/edit-pop-up.component';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { EditComponent } from './edit/edit.component';
     ArticleComponent,
     LoginComponent,
     NewArticleComponent,
-    EditComponent
+    EditComponent,
+    EditPopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { EditComponent } from './edit/edit.component';
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

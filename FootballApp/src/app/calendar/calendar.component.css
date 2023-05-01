@@ -1,6 +1,7 @@
 .header {
   text-align: center;
   font-size: 20px;
+  /* padding-left: 7.5%; */
 }
 
 .card {
@@ -31,7 +32,7 @@
   align-items: center;
   color: black;
   font-size: 20px;
-  padding-left: 48.5%;
+  padding-left: 48%;
   box-sizing: border-box;
 }
 
@@ -62,4 +63,28 @@ b {
   padding-left: 20px;
 }
 
+button {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #555;
+}
+
+.cardButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 46.5%;
+}
+
+p{
+  text-align: center;
+}
   
