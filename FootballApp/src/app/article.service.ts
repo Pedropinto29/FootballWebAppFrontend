@@ -7,6 +7,7 @@ export class Article {
   "title" : string;
   "subtitle": string;
   "body": string;
+  "userId":number;
 }
 
 

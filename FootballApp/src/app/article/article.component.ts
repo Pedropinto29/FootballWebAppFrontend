@@ -3,6 +3,7 @@ import { Article, ArticleService } from '../article.service';
 import { HomeComponent } from '../home/home.component';
 import { ActivatedRoute } from '@angular/router';
 import { __values } from 'tslib';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-article',
@@ -15,8 +16,10 @@ export class ArticleComponent {
   title:string = "";
   subtitle:string = "";
   body:string = "";
+  userId:number = 0;
+  writter : string = "";
 
-  constructor (private articleService: ArticleService, private route: ActivatedRoute) {}
+  constructor (private articleService: ArticleService, private route: ActivatedRoute, private userService: UserService) {}
 
   ngOnInit() {
     this.articleService.getArticle(this.route.snapshot.params["id"]).subscribe(
@@ -25,8 +28,18 @@ export class ArticleComponent {
         this.title = this.article.title
         this.subtitle = this.article.subtitle
         this.body = this.article.body
-        console.log(this.body)
+        this.userId = this.article.userId 
+        console.log("heyyyyyy", this.userId)
+
+        this.userService.getUsername(this.userId).subscribe(
+          data => {
+            this.writter = data.username
+          }
+        )
       }
+      
     )
+    
+    
   }
 }

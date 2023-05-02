@@ -17,4 +17,14 @@ export class ProfileComponent {
       }
     )
   }
+
+  annualPlace() {
+    console.log(this.user.userId)
+    this.user.annualPlace = "Gate E"
+    this.userService.annualPlace(this.user.userId, this.user).subscribe(
+      data => {
+        console.log("Bought Annual Place")
+      }
+    )
+  }
 }

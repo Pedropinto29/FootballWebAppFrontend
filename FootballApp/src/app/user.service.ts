@@ -42,4 +42,13 @@ export class UserService {
     console.log(user)
     return this.http.post(this.baseUrl + "userExists", user)
   }
+
+  annualPlace(id : number, user: User) : Observable<any> {
+    return this.http.put(this.baseUrl + 'annualPlace/' + id, user)
+  }
+
+  getUsername(id:number) : Observable<any> {
+    return this.http.get(this.baseUrl + 'username/' + id)
+  }
 }
+
