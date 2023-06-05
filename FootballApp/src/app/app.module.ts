@@ -21,6 +21,9 @@ import { LoginComponent } from './login/login.component';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { EditComponent } from './edit/edit.component';
 import { EditPopUpComponent } from './edit-pop-up/edit-pop-up.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -34,7 +37,8 @@ import { EditPopUpComponent } from './edit-pop-up/edit-pop-up.component';
     LoginComponent,
     NewArticleComponent,
     EditComponent,
-    EditPopUpComponent
+    EditPopUpComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,9 @@ import { EditPopUpComponent } from './edit-pop-up/edit-pop-up.component';
     MatIconModule,
     HttpClientModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

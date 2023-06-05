@@ -1,4 +1,3 @@
-/* Style the form container */
 form {
   display: flex;
   flex-direction: column;
@@ -8,14 +7,14 @@ form {
   width: 300px;
 }
 
-/* Style the input container */
+
 .input {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-/* Style the label */
+
 label {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -23,7 +22,7 @@ label {
   margin-bottom: 5px;
 }
 
-/* Style the input */
+
 input {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -35,7 +34,7 @@ input {
   width: 100%;
 }
 
-/* Style the submit button */
+
 .btn {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -48,7 +47,6 @@ input {
   transition: background-color 0.2s ease;
 }
 
-/* Change the background color of the submit button on hover */
 .btn:hover {
   background-color: #555;
 }

@@ -29,7 +29,6 @@ export class ArticleComponent {
         this.subtitle = this.article.subtitle
         this.body = this.article.body
         this.userId = this.article.userId 
-        console.log("heyyyyyy", this.userId)
 
         this.userService.getUsername(this.userId).subscribe(
           data => {

@@ -17,10 +17,11 @@
     </div>
     <br>
     <div *ngIf="user.annualPlace">
-        <b class="label"> Email: </b>
-        <span class="getted"> {{user.email}}</span>
+        <b class="label"> Annual Place: </b>
+        <span class="getted"> {{user.annualPlace}}</span>
     </div>
-    <div #elseBlock>
+
+    <div *ngIf="!user.annualPlace">
         <button (click) = "annualPlace()"> Get annual place</button>
     </div>
 </div>

@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ArticleService, Article } from '../article.service';
 import { Router } from '@angular/router';
-
+// import { EventEmitter} from 'stream'
 
 
 @Component({
@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   articles: Article[] = []
   userType : string = ""
+  searchText : string = ""
 
   constructor (private articleService : ArticleService, private router:Router) {}
 
@@ -52,5 +53,10 @@ export class HomeComponent {
     )
 
     window.location.reload()
+  }
+
+  onSearchTextEntered(searchValue : string) {
+    this.searchText = searchValue;
+    console.log(this.searchText)
   }
 }

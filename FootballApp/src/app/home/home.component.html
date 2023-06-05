@@ -1,29 +1,35 @@
 <h1> Last News</h1>
 <div *ngIf="userType">
-    <mat-card class="card" *ngFor="let article of articles" (click) ="viewArticle(article)">
-        <mat-card-title class="text">
-            {{article.title}}
-            <button class="cardButton" (click)="edit(article)">EDIT</button>
-        </mat-card-title>
-        <mat-card-subtitle class="text2">
-            {{article.subtitle}}
-            <button class="cardButton" (click)="delete(article)">DELETE</button>
-        </mat-card-subtitle>
-    </mat-card>
+    <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+    <div *ngFor="let article of articles">
+        <mat-card class="card" *ngIf = "searchText === '' || article.title.toLowerCase().includes(searchText)" (click) ="viewArticle(article)">
+            <mat-card-title class="text">
+                {{article.title}}
+                <button class="cardButton" (click)="edit(article)">EDIT</button>
+            </mat-card-title>
+            <mat-card-subtitle class="text2">
+                {{article.subtitle}}
+                <button class="cardButton" (click)="delete(article)">DELETE</button>
+            </mat-card-subtitle>
+        </mat-card>
+    </div>
     <div class="butttonDiv">
         <button (click) = "newArticle()"> Create a news</button>
     </div>
 </div>
 
 <div *ngIf="!userType">
-    <mat-card class="card" *ngFor="let article of articles" (click) ="viewArticle(article)">
-        <mat-card-title class="text">
-            {{article.title}} 
-        </mat-card-title>
-        <mat-card-subtitle class="text">
-            {{article.subtitle}}
-        </mat-card-subtitle>
-    </mat-card>
+    <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+    <div *ngFor="let article of articles">
+        <mat-card class="card" *ngIf = "searchText === '' || article.title.toLowerCase().includes(searchText)" (click) ="viewArticle(article)">
+            <mat-card-title class="text">
+                {{article.title}} 
+            </mat-card-title>
+            <mat-card-subtitle class="text">
+                {{article.subtitle}}
+            </mat-card-subtitle>
+        </mat-card>
+    </div>
 </div>
 
 
