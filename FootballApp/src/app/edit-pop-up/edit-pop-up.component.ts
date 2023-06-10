@@ -35,5 +35,7 @@ export class EditPopUpComponent {
         console.log("Game edited")
       }
     )
+
+    window.location.reload()
   }
 }
